@@ -1,0 +1,130 @@
+<html>
+<head>
+
+
+
+<style type=text/css>
+ 
+  @font-face { font-family: 'ON-IGothic'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eleven@1.0/ON-IGothic.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+    h1{font-size: 37px;text-align: "center"; padding-top: 80px; font-family: 'ON-IGothic'}
+    h2{font-size: 16px;text-align: "center"; font-family: 'ON-IGothic' }
+    p{font-size: 20px;text-align: "center"; font-family: 'ON-IGothic'}
+    div{border: none; background-color: lightyellow; padding-top: 50px; padding-right: 50px; padding-bottom: 50px; padding-left: 50px; text-align: "center"; font-size: 20px; font-family: 'ON-IGothic'}
+    body{background-color: lightyellow; font-family: 'ON-IGothic'}
+
+.chkbox{width:30px;height:30px;}
+
+</style>
+
+
+
+<title>로또번호 생성기</title>
+
+
+
+<script language="JavaScript" src="lotto.js"></script>
+
+
+
+</head>
+  <body oncontextmenu="return false">
+  <h1 align=center>로또번호 생성기</h1>
+  <br>
+  <blockquote>
+  <p align=center>
+  <table width=600>
+  <tr><td>
+  <h2> 이번주, 당신의 행운의 숫자는?</h2>
+
+  <h2>로또번호 생성기 입니다. <br>
+  제외할 번호를 체크하고 버튼을 누르면 행운의 숫자가 생성됩니다!<br><br><br></h2>
+
+  <p>제외할 숫자 : </p>
+
+  <p align="center"><font size=3>
+<input type=checkbox onclick="except_setting(this,0)" class="chkbox">01
+<input type=checkbox onclick="except_setting(this,1)" class="chkbox">02
+<input type=checkbox onclick="except_setting(this,2)" class="chkbox">03
+<input type=checkbox onclick="except_setting(this,3)" class="chkbox">04
+<input type=checkbox onclick="except_setting(this,4)" class="chkbox">05
+<input type=checkbox onclick="except_setting(this,5)" class="chkbox">06
+<input type=checkbox onclick="except_setting(this,6)" class="chkbox">07<br>
+<input type=checkbox onclick="except_setting(this,7)" class="chkbox">08
+<input type=checkbox onclick="except_setting(this,8)" class="chkbox">09
+<input type=checkbox onclick="except_setting(this,9)" class="chkbox">10
+<input type=checkbox onclick="except_setting(this,10)" class="chkbox">11
+<input type=checkbox onclick="except_setting(this,11)" class="chkbox">12
+<input type=checkbox onclick="except_setting(this,12)" class="chkbox">13
+<input type=checkbox onclick="except_setting(this,13)" class="chkbox">14<br>
+<input type=checkbox onclick="except_setting(this,14)" class="chkbox">15
+<input type=checkbox onclick="except_setting(this,15)" class="chkbox">16
+<input type=checkbox onclick="except_setting(this,16)" class="chkbox">17
+<input type=checkbox onclick="except_setting(this,17)" class="chkbox">18
+<input type=checkbox onclick="except_setting(this,18)" class="chkbox">19
+<input type=checkbox onclick="except_setting(this,19)" class="chkbox">20
+<input type=checkbox onclick="except_setting(this,20)" class="chkbox">21<br>
+<input type=checkbox onclick="except_setting(this,21)" class="chkbox">22
+<input type=checkbox onclick="except_setting(this,22)" class="chkbox">23
+<input type=checkbox onclick="except_setting(this,23)" class="chkbox">24
+<input type=checkbox onclick="except_setting(this,24)" class="chkbox">25
+<input type=checkbox onclick="except_setting(this,25)" class="chkbox">26
+<input type=checkbox onclick="except_setting(this,26)" class="chkbox">27
+<input type=checkbox onclick="except_setting(this,27)" class="chkbox">28<br>
+<input type=checkbox onclick="except_setting(this,28)" class="chkbox">29
+<input type=checkbox onclick="except_setting(this,29)" class="chkbox">30
+<input type=checkbox onclick="except_setting(this,30)" class="chkbox">31
+<input type=checkbox onclick="except_setting(this,31)" class="chkbox">32
+<input type=checkbox onclick="except_setting(this,32)" class="chkbox">33
+<input type=checkbox onclick="except_setting(this,33)" class="chkbox">34
+<input type=checkbox onclick="except_setting(this,34)" class="chkbox">35<br>
+<input type=checkbox onclick="except_setting(this,35)" class="chkbox">36
+<input type=checkbox onclick="except_setting(this,36)" class="chkbox">37
+<input type=checkbox onclick="except_setting(this,37)" class="chkbox">38
+<input type=checkbox onclick="except_setting(this,38)" class="chkbox">39
+<input type=checkbox onclick="except_setting(this,39)" class="chkbox">40
+<input type=checkbox onclick="except_setting(this,40)" class="chkbox">41
+<input type=checkbox onclick="except_setting(this,41)" class="chkbox">42<br>
+<input type=checkbox onclick="except_setting(this,42)" class="chkbox">43
+<input type=checkbox onclick="except_setting(this,43)" class="chkbox">44
+<input type=checkbox onclick="except_setting(this,44)" class="chkbox">45
+</font>
+
+
+<p align=center>
+
+
+<input type=button value="번호 생성(↓스크롤)" onclick="lotto_exec()" style="width:60%;height:50pt;font-size:20pt;cursor:hand; font-family: 'ON-IGothic';">
+﻿<p align=center><table><tr><td>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:468px;height:60px"
+     data-ad-client="ca-pub-7130538755139897"
+     data-ad-slot="2384272919"></ins>
+<script>
+
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</td></tr></table></p><p><div id="lotto_result"></div></p>
+<p><div id="lotto_history"></div></p>
+</td></tr></table>
+</p>
+
+</blockquote>
+﻿﻿<!--1-->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-24965715-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<!--2-->
+</body>
+</html>
